@@ -9,22 +9,34 @@
 import Foundation
 import UIKit
 
-protocol SecondPresenterProtocol {
+protocol SecondPresenterProtocol: BasePresenterProtocol {
     func setInfo()
     func back()
 }
 
-final class SecondPresenter: SecondPresenterProtocol {
+final class SecondPresenter: BasePresenter<SecondVC>, SecondPresenterProtocol {
+
+    // MARK: - Variables
+    private var view: SecondViewProtocol
+    private var router: SecondRouterProtocol
+    private var model: SecondModelProtocol
     
-    unowned let view: SecondViewProtocol
-    let router: SecondRouterProtocol
-    let model: SecondModelProtocol
+    let user: User
     
-    init(view: SecondViewProtocol, router: SecondRouterProtocol, model: SecondModelProtocol) {
+    // MARK: - Override
+    override var v: BaseViewProtocol? { view }
+    override var r: BaseRouterProtocol? { router }
+    override var m: BaseModelProtocol? { model }
+    
+    init(view: SecondViewProtocol, router: SecondRouterProtocol, model: SecondModelProtocol, user: User) {
         self.view = view
         self.router = router
         self.model = model
+        self.user = user
+        super.init(view: view, router: router, model: model)
     }
+
+
     
     deinit {
         print("deinit SecondPresenter")

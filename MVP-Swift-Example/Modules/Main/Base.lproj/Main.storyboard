@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sFb-pj-3pR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sFb-pj-3pR">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,22 +36,34 @@
                                     <action selector="openSecondVC:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VH0-kq-XPd"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bj4-EL-zgb">
+                                <rect key="frame" x="132" y="743" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="GKp-ae-rfB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RsR-LV-ejm" secondAttribute="trailing" id="9Z1-vG-RRv"/>
+                            <constraint firstItem="Bj4-EL-zgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F1X-JW-rA2"/>
                             <constraint firstAttribute="bottomMargin" secondItem="RsR-LV-ejm" secondAttribute="bottom" constant="22" id="URp-fK-Xnd"/>
                             <constraint firstItem="RsR-LV-ejm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZhP-XQ-4Oz"/>
+                            <constraint firstItem="Bj4-EL-zgb" firstAttribute="top" secondItem="GiZ-E8-qtQ" secondAttribute="bottom" constant="284.5" id="btK-fd-ZSB"/>
                             <constraint firstItem="mlW-Ci-fNf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fwq-kN-09g"/>
+                            <constraint firstItem="RsR-LV-ejm" firstAttribute="top" secondItem="Bj4-EL-zgb" secondAttribute="bottom" constant="33" id="hfa-N7-mfE"/>
                             <constraint firstItem="mlW-Ci-fNf" firstAttribute="top" secondItem="GiZ-E8-qtQ" secondAttribute="bottom" constant="22" id="mSg-YN-wmo"/>
                             <constraint firstItem="GiZ-E8-qtQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vLa-Hg-wVi"/>
-                            <constraint firstItem="GiZ-E8-qtQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wNq-Kv-X1Y"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZdL-FF-6Ig"/>
                     <connections>
+                        <outlet property="bottomSpaceConstraint" destination="URp-fK-Xnd" id="oSd-QK-Roz"/>
                         <outlet property="infoLabel" destination="GiZ-E8-qtQ" id="t90-IC-kVo"/>
+                        <outlet property="textField" destination="Bj4-EL-zgb" id="OA1-e4-2CQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -77,9 +89,4 @@
             <point key="canvasLocation" x="-42.028985507246382" y="89.732142857142847"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

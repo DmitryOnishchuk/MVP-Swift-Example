@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol MainRouterProtocol {
+protocol MainRouterProtocol: BaseRouterProtocol {
     func openSecondVC()
 }
 
@@ -26,7 +26,7 @@ final class MainRouter: NSObject, RouterProtocol, MainRouterProtocol {
     }
     
     func openSecondVC() {
-        let secondVC = SecondModuleBuilder().create()
+        let secondVC = SecondModuleBuilder().create(user: User())
         push(viewController: secondVC)
     }
 

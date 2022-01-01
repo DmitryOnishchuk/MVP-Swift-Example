@@ -12,7 +12,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    private lazy var userDefaultsManager: UserDefaultsManager = UserDefaultsManager()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        DependencyManager {
+            Module { self.userDefaultsManager }
+        }.build()
         
         loadView()
         
@@ -34,6 +40,7 @@ extension AppDelegate {
     }
 }
 
+// выводим print только для разработчиков
 func print(_ items: Any...) {
     #if DEBUG
     Swift.print(items[0])

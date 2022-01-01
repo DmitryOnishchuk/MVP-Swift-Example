@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol SecondRouterProtocol {
+protocol SecondRouterProtocol: BaseRouterProtocol {
     func exit()
 }
 

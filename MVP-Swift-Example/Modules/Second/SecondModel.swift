@@ -6,7 +6,7 @@
 //  Copyright © 2021 Dmitry Onishchuk. All rights reserved.
 //
 
-protocol SecondModelProtocol: AnyObject {
+protocol SecondModelProtocol: BaseModelProtocol {
     func test(comlete: @escaping TestClosure)
 }
 

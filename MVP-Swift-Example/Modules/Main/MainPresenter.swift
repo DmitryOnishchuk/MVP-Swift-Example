@@ -8,22 +8,29 @@
 import Foundation
 import UIKit
 
-protocol MainPresenterProtocol {
+protocol MainPresenterProtocol: BasePresenterProtocol {
     func setInfo()
     func setTestArrayFromInternetOrDB()
     func openSecondVC()
 }
 
-final class MainPresenter: MainPresenterProtocol {
+final class MainPresenter: BasePresenter<MainVC>, MainPresenterProtocol {
     
-    unowned let view: MainViewProtocol
-    let router: MainRouterProtocol
-    let model: MainModelProtocol
+    // MARK: - Variables
+    private var view: MainViewProtocol
+    private var router: MainRouterProtocol
+    private var model: MainModelProtocol
+    
+    // MARK: - Override
+    override var v: BaseViewProtocol? { view }
+    override var r: BaseRouterProtocol? { router }
+    override var m: BaseModelProtocol? { model }
     
     init(view: MainViewProtocol, router: MainRouterProtocol, model: MainModelProtocol) {
         self.view = view
         self.router = router
         self.model = model
+        super.init(view: view, router: router, model: model)
     }
     
     deinit {

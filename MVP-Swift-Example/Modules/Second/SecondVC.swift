@@ -8,35 +8,47 @@
 
 import UIKit
 
-protocol SecondViewProtocol: AnyObject {
+protocol SecondViewProtocol: MainViewProtocol {
     func setInfoLabel(text: String)
 }
 
-final class SecondVC: UIViewController {
+final class SecondVC: BaseViewController, SecondViewProtocol{
     
+    // MARK: - Outlets
+    @IBOutlet weak var infoLabel: UILabel!
+    
+    // MARK: - Variables
     var presenter: SecondPresenterProtocol!
     
-    @IBOutlet weak var infoLabel: UILabel!
+    // MARK: - Override
+    override var basePresenter: BasePresenterProtocol? { presenter }
+    
+    override func configureUI() {
+        presenter.setInfo()
+    }
     
     // MARK: - View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        presenter.setInfo()
     }
     
     deinit {
         print("deinit SecondVC")
     }
     
+
+}
+
+// MARK: - Actions
+extension SecondVC {
     @IBAction func backButtonAction(_ sender: UIButton) {
         presenter.back()
     }
 }
 
-
-extension SecondVC: SecondViewProtocol {
+// MARK: - Methods
+extension SecondVC {
     
     func setInfoLabel(text: String){
         infoLabel.text = text

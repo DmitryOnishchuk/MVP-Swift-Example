@@ -6,7 +6,7 @@
 //  Copyright © 2021 Dmitry Onishchuk. All rights reserved.
 //
 
-protocol MainModelProtocol: AnyObject {
+protocol MainModelProtocol: BaseModelProtocol, AnyObject {
     func getDataFromInternetOrDB(comlete: @escaping TestClosure)
 }
 
