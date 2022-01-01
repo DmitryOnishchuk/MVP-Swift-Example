@@ -44,19 +44,39 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9M9-Mr-JeN">
+                                <rect key="frame" x="167.5" y="518.5" width="79" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show Toast"/>
+                                <connections>
+                                    <action selector="showToasAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NSf-Py-9Fq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfT-ku-cja">
+                                <rect key="frame" x="162.5" y="556.5" width="89" height="30"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Show Loader"/>
+                                <connections>
+                                    <action selector="showLoaderAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="83E-qi-cCd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RsR-LV-ejm" secondAttribute="trailing" id="9Z1-vG-RRv"/>
                             <constraint firstItem="Bj4-EL-zgb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="F1X-JW-rA2"/>
+                            <constraint firstItem="jfT-ku-cja" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G1v-fa-avM"/>
                             <constraint firstAttribute="bottomMargin" secondItem="RsR-LV-ejm" secondAttribute="bottom" constant="22" id="URp-fK-Xnd"/>
                             <constraint firstItem="RsR-LV-ejm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZhP-XQ-4Oz"/>
                             <constraint firstItem="Bj4-EL-zgb" firstAttribute="top" secondItem="GiZ-E8-qtQ" secondAttribute="bottom" constant="284.5" id="btK-fd-ZSB"/>
                             <constraint firstItem="mlW-Ci-fNf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fwq-kN-09g"/>
                             <constraint firstItem="RsR-LV-ejm" firstAttribute="top" secondItem="Bj4-EL-zgb" secondAttribute="bottom" constant="33" id="hfa-N7-mfE"/>
+                            <constraint firstItem="jfT-ku-cja" firstAttribute="top" secondItem="9M9-Mr-JeN" secondAttribute="bottom" constant="8" symbolic="YES" id="iY9-Bw-AZJ"/>
+                            <constraint firstItem="9M9-Mr-JeN" firstAttribute="top" secondItem="mlW-Ci-fNf" secondAttribute="bottom" constant="8" symbolic="YES" id="mRe-c8-vsh"/>
                             <constraint firstItem="mlW-Ci-fNf" firstAttribute="top" secondItem="GiZ-E8-qtQ" secondAttribute="bottom" constant="22" id="mSg-YN-wmo"/>
                             <constraint firstItem="GiZ-E8-qtQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vLa-Hg-wVi"/>
+                            <constraint firstItem="9M9-Mr-JeN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vnr-Ca-hnD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ZdL-FF-6Ig"/>

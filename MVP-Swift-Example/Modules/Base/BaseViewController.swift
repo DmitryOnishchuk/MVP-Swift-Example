@@ -1,5 +1,4 @@
 import UIKit
-import MBProgressHUD
 import Toast_Swift
 
 class BaseViewController: UIViewController {
@@ -27,7 +26,8 @@ class BaseViewController: UIViewController {
 	}()
 	
 	@Inject private var userdefaultsManager: UserDefaultsManager
-	
+    lazy var loader = Loader(in: self.view)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 		configureUI()
@@ -62,25 +62,13 @@ class BaseViewController: UIViewController {
 	
 	// MARK: - Wait indicator
 	
-	private var progressHUD: MBProgressHUD?
-	
-	func showLoadingIndicator() {
-		showLoadingIndicator(withGraceTime: 0.5)
-	}
-	
-	func showLoadingIndicator(withGraceTime graceTime: Double) {
-		guard progressHUD == nil else { return }
-        let hud = MBProgressHUD.showAdded(to: view, animated: true)
-        view.addSubview(hud)
-        hud.graceTime = graceTime
-        hud.show(animated: true)
-        progressHUD = hud
-	}
-	
-	func hideLoadingIndicator() {
-		progressHUD?.hide(animated: true)
-		progressHUD = nil
-	}
+    func showLoadingIndicator() {
+        self.loader.show(view: self.view)
+    }
+    
+    func hideLoadingIndicator() {
+        self.loader.hide()
+    }
 	
 	// MARK: - Keyboard Toolbar
 	@objc private func toolbarNextButtonPressed(_ sender: Any) {

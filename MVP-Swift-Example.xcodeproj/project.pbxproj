@@ -20,6 +20,7 @@
 		0A8CFA7727809A6F004E025C /* BaseRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7627809A6F004E025C /* BaseRouterProtocol.swift */; };
 		0A8CFA7927809A79004E025C /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7827809A79004E025C /* BaseModelProtocol.swift */; };
 		0A8CFA7C2780A396004E025C /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7B2780A396004E025C /* UserDefaults+Extension.swift */; };
+		0A8CFA802780AEB9004E025C /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7F2780AEB9004E025C /* Loader.swift */; };
 		32A6F09026EA123800F4F1E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F08F26EA123800F4F1E1 /* AppDelegate.swift */; };
 		32A6F09426EA123800F4F1E1 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F09326EA123800F4F1E1 /* MainVC.swift */; };
 		32A6F09726EA123800F4F1E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A6F09526EA123800F4F1E1 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		0A8CFA7627809A6F004E025C /* BaseRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouterProtocol.swift; sourceTree = "<group>"; };
 		0A8CFA7827809A79004E025C /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
 		0A8CFA7B2780A396004E025C /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		0A8CFA7F2780AEB9004E025C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
 		2C9ADB85340419269701BE12 /* Pods-MVP-Swift-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP-Swift-Example.release.xcconfig"; path = "Target Support Files/Pods-MVP-Swift-Example/Pods-MVP-Swift-Example.release.xcconfig"; sourceTree = "<group>"; };
 		32A6F08C26EA123800F4F1E1 /* MVP-Swift-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MVP-Swift-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		32A6F08F26EA123800F4F1E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				0A8CFA5C27809047004E025C /* DependencyManager.swift */,
-				0A8CFA5E27809048004E025C /* UserDefault.swift */,
 				0A8CFA5D27809047004E025C /* UserDefaultsManager.swift */,
 			);
 			path = Managers;
@@ -140,6 +141,15 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		0A8CFA7E2780AE94004E025C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				0A8CFA5E27809048004E025C /* UserDefault.swift */,
+				0A8CFA7F2780AEB9004E025C /* Loader.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		1390E418B5A9C2B8CA197457 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +186,7 @@
 				32A6F0B526EA183A00F4F1E1 /* NetworkLayer */,
 				0A8CFA6D27809446004E025C /* Models */,
 				0A8CFA5B27809038004E025C /* Managers */,
+				0A8CFA7E2780AE94004E025C /* Utils */,
 				32A6F0A426EA129B00F4F1E1 /* Modules */,
 				32A6F0AD26EA13E600F4F1E1 /* Router */,
 			);
@@ -395,6 +406,7 @@
 				0A8CFA6C2780937F004E025C /* UIViewController+Keyboard.swift in Sources */,
 				32A6F0AC26EA13C200F4F1E1 /* MainRouter.swift in Sources */,
 				0A8CFA69278090B7004E025C /* BaseViewController.swift in Sources */,
+				0A8CFA802780AEB9004E025C /* Loader.swift in Sources */,
 				32A6F09426EA123800F4F1E1 /* MainVC.swift in Sources */,
 				32A6F0B126EA177300F4F1E1 /* MainModel.swift in Sources */,
 				0A8CFA6027809048004E025C /* UserDefaultsManager.swift in Sources */,

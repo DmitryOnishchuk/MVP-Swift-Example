@@ -41,18 +41,27 @@ final class MainVC: BaseViewController, MainViewProtocol {
     deinit {
         print("deinit MainVC")
     }
-
 }
 
 // MARK: - Actions
 extension MainVC {
     @IBAction func getValueFromInternetOrDB(_ sender: UIButton) {
         presenter.setTestArrayFromInternetOrDB()
-        showToast(msg: "Message")
     }
     
     @IBAction func openSecondVC(_ sender: UIButton) {
         presenter.openSecondVC()
+    }
+    
+    @IBAction func showToasAction(_ sender: UIButton) {
+        showToast(msg: "Message")
+    }
+    
+    @IBAction func showLoaderAction(_ sender: UIButton) {
+        showLoadingIndicator()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+            self.hideLoadingIndicator()
+        }
     }
 }
 
