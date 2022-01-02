@@ -96,7 +96,7 @@ extension BaseViewController {
     public func showToast(title: String? = nil, msg: String, position: ToastPosition = .bottom) {
         view.hideAllToasts()
         if position == .top {
-            let top: CGFloat = self.view.bounds.size.height / 4
+            let top: CGFloat = self.view.bounds.size.height / 6
             let center = CGPoint(x: self.view.bounds.size.width / 2.0, y: top)
             view.makeToast(msg, duration: 1.5, point: center, title: title, image: nil, completion: nil)
         } else if position == .bottom {
