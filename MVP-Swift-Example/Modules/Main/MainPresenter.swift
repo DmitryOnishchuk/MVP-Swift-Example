@@ -48,7 +48,7 @@ final class MainPresenter: BasePresenter<MainVC>, MainPresenterProtocol {
                 self.view.setInfoLabel(text: er)
             }else{
                 for item in array {
-                    print(item)
+                    self.view.setInfoLabel(text: item)
                 }
             }
         }

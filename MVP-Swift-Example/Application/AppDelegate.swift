@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             Module { self.userDefaultsManager }
             Module { self.testInternetManager }
         }.build()
+        
+        configureToastUI()
         
         loadView()
         
@@ -40,6 +43,14 @@ extension AppDelegate {
         window?.rootViewController = MainModuleBuilder().create()
         window?.makeKeyAndVisible()
     }
+    
+    private func configureToastUI() {
+        var style = ToastManager.shared.style
+        style.titleAlignment = .center
+        style.messageAlignment = .center
+        ToastManager.shared.style = style
+    }
+    
 }
 
 // выводим print только для разработчиков

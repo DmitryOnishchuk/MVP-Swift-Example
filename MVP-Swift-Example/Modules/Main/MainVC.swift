@@ -68,6 +68,7 @@ extension MainVC {
 // MARK: - Methods
 extension MainVC {
     func setInfoLabel(text: String){
+        showToast(msg: text)
         infoLabel.text = text
     }
 }

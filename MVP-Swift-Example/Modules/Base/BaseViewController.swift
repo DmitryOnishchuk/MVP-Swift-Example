@@ -90,7 +90,12 @@ class BaseViewController: UIViewController {
 extension BaseViewController {
 	
     public func showToast(title: String? = nil, msg: String, position: ToastPosition = .top) {
-        view.makeToast(msg, duration: 1.5, position: position, title: title)
+        if position == .top {
+            let center = CGPoint(x: self.view.bounds.size.width / 2.0, y: 150)
+            view.makeToast(msg, duration: 1.5, point: center, title: title, image: nil, completion: nil)
+        } else {
+            view.makeToast(msg, duration: 1.5, position: position, title: title)
+        }
     }
     
 	func showMessage(_ message: String, title: String? = nil, handler: (() -> Void)? = nil) {
