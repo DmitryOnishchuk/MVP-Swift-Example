@@ -45,7 +45,7 @@ final class MainPresenter: BasePresenter<MainVC>, MainPresenterProtocol {
         model.getDataFromInternetOrDB { [weak self] (array, errorMessage) in
             guard let `self` = self else { return }
             if let er = errorMessage{
-                self.view.setInfoLabel(text: er)
+                self.view.showError(er)
             }else{
                 for item in array {
                     self.view.setInfoLabel(text: item)

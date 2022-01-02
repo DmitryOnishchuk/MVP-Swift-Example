@@ -89,6 +89,10 @@ class BaseViewController: UIViewController {
 
 extension BaseViewController {
 	
+    func showErrorToast(_ message: String) {
+        showToast(title: "Error", msg: message)
+    }
+    
     public func showToast(title: String? = nil, msg: String, position: ToastPosition = .top) {
         if position == .top {
             let center = CGPoint(x: self.view.bounds.size.width / 2.0, y: 150)

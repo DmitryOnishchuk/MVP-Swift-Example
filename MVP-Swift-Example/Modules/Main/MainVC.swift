@@ -54,7 +54,7 @@ extension MainVC {
     }
     
     @IBAction func showToasAction(_ sender: UIButton) {
-        showToast(msg: "Message")
+        showErrorToast("Message")
     }
     
     @IBAction func showLoaderAction(_ sender: UIButton) {
