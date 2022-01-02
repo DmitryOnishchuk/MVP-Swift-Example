@@ -13,11 +13,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     private lazy var userDefaultsManager: UserDefaultsManager = UserDefaultsManager()
+    private lazy var testInternetManager: TestInternetManager = TestInternetManager.shared
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         DependencyManager {
             Module { self.userDefaultsManager }
+            Module { self.testInternetManager }
         }.build()
         
         loadView()

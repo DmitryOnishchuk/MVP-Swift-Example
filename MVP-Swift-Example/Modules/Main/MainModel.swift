@@ -6,18 +6,20 @@
 //  Copyright © 2021 Dmitry Onishchuk. All rights reserved.
 //
 
-protocol MainModelProtocol: BaseModelProtocol, AnyObject {
+protocol MainModelProtocol: BaseModelProtocol {
     func getDataFromInternetOrDB(comlete: @escaping TestClosure)
 }
 
 class MainModel: MainModelProtocol {
 
+    @Inject private var testInternetManager: TestInternetManager
+    
     deinit {
         print("deinit MainModel")
     }
     
     func getDataFromInternetOrDB(comlete: @escaping TestClosure) {
-        TestInternetManager.shared.getArray(){[weak self] (array, errorMessage) in
+        testInternetManager.getArray(){[weak self] (array, errorMessage) in
             comlete((array, errorMessage))
         }
     }

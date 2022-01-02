@@ -12,12 +12,14 @@ protocol SecondModelProtocol: BaseModelProtocol {
 
 class SecondModel: SecondModelProtocol {
 
+    @Inject private var testInternetManager: TestInternetManager
+    
     deinit {
         print("deinit SecondModel")
     }
     
     func test(comlete: @escaping TestClosure) {
-        TestInternetManager.shared.getArray(){[weak self] (array, errorMessage) in
+        testInternetManager.getArray(){[weak self] (array, errorMessage) in
             comlete((array, errorMessage))
         }
     }
