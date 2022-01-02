@@ -93,12 +93,16 @@ extension BaseViewController {
         showToast(title: "Error", msg: message)
     }
     
-    public func showToast(title: String? = nil, msg: String, position: ToastPosition = .top) {
+    public func showToast(title: String? = nil, msg: String, position: ToastPosition = .bottom) {
+        view.hideAllToasts()
         if position == .top {
-            let center = CGPoint(x: self.view.bounds.size.width / 2.0, y: 150)
+            let top: CGFloat = self.view.bounds.size.height / 4
+            let center = CGPoint(x: self.view.bounds.size.width / 2.0, y: top)
             view.makeToast(msg, duration: 1.5, point: center, title: title, image: nil, completion: nil)
-        } else {
-            view.makeToast(msg, duration: 1.5, position: position, title: title)
+        } else if position == .bottom {
+            let bottom: CGFloat = (self.view.bounds.size.height / 4) * 3
+            let center = CGPoint(x: self.view.bounds.size.width / 2.0, y: bottom)
+            view.makeToast(msg, duration: 1.5, point: center, title: title, image: nil, completion: nil)
         }
     }
     
