@@ -25,7 +25,7 @@ class BaseViewController: UIViewController {
 		return toolbar
 	}()
 	
-	@Inject private var userdefaultsManager: UserDefaultsManager
+	@Inject private var userDefaultsManager: UserDefaultsManager
     lazy var loader = Loader(in: self.view)
     
     override func viewDidLoad() {

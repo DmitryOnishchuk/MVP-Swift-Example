@@ -28,7 +28,6 @@ final class SecondVC: BaseViewController, SecondViewProtocol{
     }
     
     // MARK: - View lifecycle
-    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
