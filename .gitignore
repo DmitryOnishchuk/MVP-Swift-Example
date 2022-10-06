@@ -29,7 +29,12 @@ Temporary Items
 
 ### Dmitry Onishchuk ###
 ## Other
+*~
 Manifest.lock
+contents.xcworkspacedata
+Breakpoints_v2.xcbkptlist
+UserInterfaceState.xcuserstate
+xcschememanagement.plist
 
 ## AppCode
 .idea/
@@ -124,6 +129,7 @@ Dependencies/
 # https://docs.fastlane.tools/best-practices/source-control/#source-control
 
 fastlane/report.xml
+fastlane/README.md
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
