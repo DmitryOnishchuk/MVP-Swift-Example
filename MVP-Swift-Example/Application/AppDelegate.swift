@@ -56,6 +56,6 @@ extension AppDelegate {
 // выводим print только для разработчиков
 func print(_ items: Any...) {
     #if DEBUG
-    Swift.print(items.first)
+    Swift.print(items.first ?? "NIL")
     #endif
 }
