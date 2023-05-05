@@ -21,6 +21,9 @@ final class MainPresenter: BasePresenter<MainVC>, MainPresenterProtocol {
     private var router: MainRouterProtocol
     private var model: MainModelProtocol
     
+    // MARK: Private Properties
+    @Inject private var userDefaultsManager: UserDefaultsManager
+    
     // MARK: - Override
     override var v: BaseViewProtocol? { view }
     override var r: BaseRouterProtocol? { router }

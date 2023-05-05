@@ -23,6 +23,9 @@ final class SecondPresenter: BasePresenter<SecondVC>, SecondPresenterProtocol {
     
     let user: User
     
+    // MARK: Private Properties
+    @Inject private var userDefaultsManager: UserDefaultsManager
+    
     // MARK: - Override
     override var v: BaseViewProtocol? { view }
     override var r: BaseRouterProtocol? { router }
