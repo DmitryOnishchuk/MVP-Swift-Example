@@ -8,11 +8,17 @@
 import Foundation
 import UIKit
 
+enum UserDefaultKey: String {
+	case user = "User"
+	case matchListRefreshed = "matchListRefreshed"
+	case isLoggedIn = "isLoggedIn"
+}
+
 final class UserDefaultsManager {
     
-    @UserDefaultCodable("User", defaultValue: User()) var user: User!
-    @UserDefault("matchListRefreshed", defaultValue: nil) var matchListRefreshed: Date?
-    @UserDefault("isLoggedIn", defaultValue: false) var isLoggedIn: Bool!
+    @UserDefaultCodable(UserDefaultKey.user.rawValue, defaultValue: User()) var user: User!
+    @UserDefault(UserDefaultKey.matchListRefreshed.rawValue, defaultValue: nil) var matchListRefreshed: Date?
+    @UserDefault(UserDefaultKey.isLoggedIn.rawValue, defaultValue: false) var isLoggedIn: Bool!
     
 }
 

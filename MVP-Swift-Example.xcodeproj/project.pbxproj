@@ -229,9 +229,9 @@
 		32A6F0A626EA12B600F4F1E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				32A6F09A26EA123900F4F1E1 /* LaunchScreen.storyboard */,
 				32A6F09826EA123900F4F1E1 /* Assets.xcassets */,
 				0A8CFA6227809057004E025C /* Colors.xcassets */,
-				32A6F09A26EA123900F4F1E1 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
