@@ -10,15 +10,13 @@ protocol BasePresenterProtocol {
 class BasePresenter<T: BaseViewController>: NSObject {
 	
 	private(set) weak var v: BaseViewProtocol?
-    private(set) weak var r: BaseRouterProtocol?
     private(set) weak var m: BaseModelProtocol?
 	var navigationController: UINavigationController? { return v?.navigationController }
 	
     
-	init(view: BaseViewProtocol?, router: BaseRouterProtocol?, model: BaseModelProtocol?) {
+	init(view: BaseViewProtocol?, model: BaseModelProtocol?) {
 		super.init()
 		self.v = view
-        self.r = router
         self.m = model
 	}
 
@@ -37,6 +35,10 @@ class BasePresenter<T: BaseViewController>: NSObject {
     func controllerWillDisappear(_ animated: Bool) {
         
     }
+	
+	deinit {
+		print("deinit BasePresenter")
+	}
 	
 }
 

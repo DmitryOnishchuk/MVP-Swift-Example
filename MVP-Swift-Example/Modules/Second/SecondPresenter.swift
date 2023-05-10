@@ -18,31 +18,25 @@ final class SecondPresenter: BasePresenter<SecondVC>, SecondPresenterProtocol {
 
     // MARK: - Variables
     private var view: SecondViewProtocol
-    private var router: SecondRouterProtocol
     private var model: SecondModelProtocol
     
-    let user: User
+	private var user: User
     
     // MARK: Private Properties
     @Inject private var userDefaultsManager: UserDefaultsManager
     
+	private var callback: ((User) -> Void)?
+	
     // MARK: - Override
     override var v: BaseViewProtocol? { view }
-    override var r: BaseRouterProtocol? { router }
     override var m: BaseModelProtocol? { model }
     
-    init(view: SecondViewProtocol, router: SecondRouterProtocol, model: SecondModelProtocol, user: User) {
+	init(view: SecondViewProtocol, model: SecondModelProtocol, user: User, callback: ((User) -> Void)?) {
         self.view = view
-        self.router = router
         self.model = model
         self.user = user
-        super.init(view: view, router: router, model: model)
-    }
-
-
-    
-    deinit {
-        print("deinit SecondPresenter")
+		self.callback = callback
+        super.init(view: view, model: model)
     }
     
     func setInfo() {
@@ -50,7 +44,10 @@ final class SecondPresenter: BasePresenter<SecondVC>, SecondPresenterProtocol {
     }
     
     func back(){
-        router.exit()
+		
+		user.token = user.token + "_test"
+		callback.map({ $0(user) })
+		v?.navigationController?.popViewController(animated: true)
     }
     
 }

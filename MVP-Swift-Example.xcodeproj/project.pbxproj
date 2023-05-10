@@ -20,7 +20,6 @@
 		0A8CFA6F27809451004E025C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA6E27809451004E025C /* User.swift */; };
 		0A8CFA7327809607004E025C /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7227809607004E025C /* BasePresenter.swift */; };
 		0A8CFA7527809A56004E025C /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7427809A56004E025C /* BaseViewProtocol.swift */; };
-		0A8CFA7727809A6F004E025C /* BaseRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7627809A6F004E025C /* BaseRouterProtocol.swift */; };
 		0A8CFA7927809A79004E025C /* BaseModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7827809A79004E025C /* BaseModelProtocol.swift */; };
 		0A8CFA7C2780A396004E025C /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7B2780A396004E025C /* UserDefaults+Extension.swift */; };
 		0A8CFA802780AEB9004E025C /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A8CFA7F2780AEB9004E025C /* Loader.swift */; };
@@ -31,7 +30,6 @@
 		32A6F09C26EA123900F4F1E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A6F09A26EA123900F4F1E1 /* LaunchScreen.storyboard */; };
 		32A6F0A826EA132C00F4F1E1 /* MainModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0A726EA132C00F4F1E1 /* MainModuleBuilder.swift */; };
 		32A6F0AA26EA139700F4F1E1 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0A926EA139700F4F1E1 /* MainPresenter.swift */; };
-		32A6F0AC26EA13C200F4F1E1 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0AB26EA13C200F4F1E1 /* MainRouter.swift */; };
 		32A6F0AF26EA13F600F4F1E1 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0AE26EA13F600F4F1E1 /* RouterProtocol.swift */; };
 		32A6F0B126EA177300F4F1E1 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0B026EA177300F4F1E1 /* MainModel.swift */; };
 		32A6F0B426EA17F500F4F1E1 /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0B326EA17F500F4F1E1 /* Closures.swift */; };
@@ -39,10 +37,10 @@
 		32A6F0BA26EA1B8A00F4F1E1 /* SecondModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0B926EA1B8A00F4F1E1 /* SecondModuleBuilder.swift */; };
 		32A6F0BC26EA1BED00F4F1E1 /* SecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0BB26EA1BED00F4F1E1 /* SecondVC.swift */; };
 		32A6F0BE26EA1C1F00F4F1E1 /* SecondPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0BD26EA1C1F00F4F1E1 /* SecondPresenter.swift */; };
-		32A6F0C026EA1C6A00F4F1E1 /* SecondRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0BF26EA1C6A00F4F1E1 /* SecondRouter.swift */; };
 		32A6F0C226EA1CAD00F4F1E1 /* SecondModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A6F0C126EA1CAD00F4F1E1 /* SecondModel.swift */; };
 		32A6F0C426EA1CF900F4F1E1 /* Second.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32A6F0C326EA1CF900F4F1E1 /* Second.storyboard */; };
 		465E2E02A1F612A130157EBC /* Pods_MVP_Swift_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89A89CFD120CA7A876AFFC9C /* Pods_MVP_Swift_Example.framework */; };
+		66A958D82A0B6570005FD31C /* NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66A958D72A0B6570005FD31C /* NSObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +57,6 @@
 		0A8CFA6E27809451004E025C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		0A8CFA7227809607004E025C /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
 		0A8CFA7427809A56004E025C /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
-		0A8CFA7627809A6F004E025C /* BaseRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouterProtocol.swift; sourceTree = "<group>"; };
 		0A8CFA7827809A79004E025C /* BaseModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModelProtocol.swift; sourceTree = "<group>"; };
 		0A8CFA7B2780A396004E025C /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 		0A8CFA7F2780AEB9004E025C /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
@@ -73,7 +70,6 @@
 		32A6F09D26EA123900F4F1E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32A6F0A726EA132C00F4F1E1 /* MainModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModuleBuilder.swift; sourceTree = "<group>"; };
 		32A6F0A926EA139700F4F1E1 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
-		32A6F0AB26EA13C200F4F1E1 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		32A6F0AE26EA13F600F4F1E1 /* RouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		32A6F0B026EA177300F4F1E1 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
 		32A6F0B326EA17F500F4F1E1 /* Closures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Closures.swift; sourceTree = "<group>"; };
@@ -81,9 +77,9 @@
 		32A6F0B926EA1B8A00F4F1E1 /* SecondModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModuleBuilder.swift; sourceTree = "<group>"; };
 		32A6F0BB26EA1BED00F4F1E1 /* SecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondVC.swift; sourceTree = "<group>"; };
 		32A6F0BD26EA1C1F00F4F1E1 /* SecondPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPresenter.swift; sourceTree = "<group>"; };
-		32A6F0BF26EA1C6A00F4F1E1 /* SecondRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRouter.swift; sourceTree = "<group>"; };
 		32A6F0C126EA1CAD00F4F1E1 /* SecondModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondModel.swift; sourceTree = "<group>"; };
 		32A6F0C326EA1CF900F4F1E1 /* Second.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Second.storyboard; sourceTree = "<group>"; };
+		66A958D72A0B6570005FD31C /* NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSObject.swift; sourceTree = "<group>"; };
 		81ABE790ADCECF56931DDF18 /* Pods-MVP-Swift-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVP-Swift-Example.debug.xcconfig"; path = "Target Support Files/Pods-MVP-Swift-Example/Pods-MVP-Swift-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		89A89CFD120CA7A876AFFC9C /* Pods_MVP_Swift_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MVP_Swift_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -131,9 +127,10 @@
 		0A8CFA7A2780A38E004E025C /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				0A8CFA7B2780A396004E025C /* UserDefaults+Extension.swift */,
-				0A5ADFD7289279E900CDA0D8 /* Int.swift */,
 				0A5ADFD928927A2B00CDA0D8 /* CGPoint.swift */,
+				0A5ADFD7289279E900CDA0D8 /* Int.swift */,
+				66A958D72A0B6570005FD31C /* NSObject.swift */,
+				0A8CFA7B2780A396004E025C /* UserDefaults+Extension.swift */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -144,7 +141,6 @@
 				0A8CFA67278090B6004E025C /* BaseViewController.swift */,
 				0A8CFA7227809607004E025C /* BasePresenter.swift */,
 				0A8CFA7427809A56004E025C /* BaseViewProtocol.swift */,
-				0A8CFA7627809A6F004E025C /* BaseRouterProtocol.swift */,
 				0A8CFA7827809A79004E025C /* BaseModelProtocol.swift */,
 			);
 			path = Base;
@@ -230,7 +226,6 @@
 				32A6F09326EA123800F4F1E1 /* MainVC.swift */,
 				32A6F0A926EA139700F4F1E1 /* MainPresenter.swift */,
 				32A6F0B026EA177300F4F1E1 /* MainModel.swift */,
-				32A6F0AB26EA13C200F4F1E1 /* MainRouter.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -277,7 +272,6 @@
 				32A6F0BB26EA1BED00F4F1E1 /* SecondVC.swift */,
 				32A6F0BD26EA1C1F00F4F1E1 /* SecondPresenter.swift */,
 				32A6F0C126EA1CAD00F4F1E1 /* SecondModel.swift */,
-				32A6F0BF26EA1C6A00F4F1E1 /* SecondRouter.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -408,13 +402,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				32A6F0AF26EA13F600F4F1E1 /* RouterProtocol.swift in Sources */,
-				0A8CFA7727809A6F004E025C /* BaseRouterProtocol.swift in Sources */,
-				32A6F0C026EA1C6A00F4F1E1 /* SecondRouter.swift in Sources */,
 				0A5ADFD8289279E900CDA0D8 /* Int.swift in Sources */,
 				0A8CFA7927809A79004E025C /* BaseModelProtocol.swift in Sources */,
 				32A6F0B426EA17F500F4F1E1 /* Closures.swift in Sources */,
 				0A8CFA6C2780937F004E025C /* UIViewController+Keyboard.swift in Sources */,
-				32A6F0AC26EA13C200F4F1E1 /* MainRouter.swift in Sources */,
 				0A8CFA69278090B7004E025C /* BaseViewController.swift in Sources */,
 				0A8CFA802780AEB9004E025C /* Loader.swift in Sources */,
 				32A6F09426EA123800F4F1E1 /* MainVC.swift in Sources */,
@@ -427,6 +418,7 @@
 				32A6F0BE26EA1C1F00F4F1E1 /* SecondPresenter.swift in Sources */,
 				0A8CFA6127809048004E025C /* UserDefault.swift in Sources */,
 				0A8CFA662780906F004E025C /* UIColor+Extension.swift in Sources */,
+				66A958D82A0B6570005FD31C /* NSObject.swift in Sources */,
 				32A6F0A826EA132C00F4F1E1 /* MainModuleBuilder.swift in Sources */,
 				32A6F0C226EA1CAD00F4F1E1 /* SecondModel.swift in Sources */,
 				0A8CFA7527809A56004E025C /* BaseViewProtocol.swift in Sources */,

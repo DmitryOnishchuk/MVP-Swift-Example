@@ -30,6 +30,7 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+		print(self.className + " viewDidLoad")
 		configureUI()
 		basePresenter?.viewDidLoad()
 		textFieldSequence.forEach { $0.inputAccessoryView = textFieldToolbar }
@@ -54,6 +55,10 @@ class BaseViewController: UIViewController {
 		if isKeyboardObserving {
 			endKeyboardObserving()
 		}
+	}
+	
+	deinit {
+		print(self.className + " deinit")
 	}
 	
 	func configureUI() {

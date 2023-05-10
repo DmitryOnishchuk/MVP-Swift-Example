@@ -10,12 +10,11 @@ import UIKit
 
 struct SecondModuleBuilder {
     
-    func create(user: User) -> SecondVC {
+    func create(user: User, callback: ((User) -> Void)?) -> SecondVC {
         let storyboard = UIStoryboard(name: "Second", bundle: nil)
         let secondVC = storyboard.instantiateViewController(withIdentifier: String(describing: SecondVC.self)) as! SecondVC
         let model = SecondModel()
-        let router = SecondRouter(vc: secondVC)
-        let presenter = SecondPresenter(view: secondVC, router: router, model: model, user: user)
+		let presenter = SecondPresenter(view: secondVC, model: model, user: user, callback: callback)
         secondVC.presenter = presenter
         return secondVC
     }

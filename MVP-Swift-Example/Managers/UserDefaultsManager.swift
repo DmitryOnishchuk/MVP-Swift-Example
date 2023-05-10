@@ -16,7 +16,7 @@ enum UserDefaultKey: String {
 
 final class UserDefaultsManager {
     
-    @UserDefaultCodable(UserDefaultKey.user.rawValue, defaultValue: User()) var user: User!
+	@UserDefaultCodable(UserDefaultKey.user.rawValue, defaultValue: User(token: String())) var user: User!
     @UserDefault(UserDefaultKey.matchListRefreshed.rawValue, defaultValue: nil) var matchListRefreshed: Date?
     @UserDefault(UserDefaultKey.isLoggedIn.rawValue, defaultValue: false) var isLoggedIn: Bool!
     
@@ -27,7 +27,7 @@ extension UserDefaultsManager {
     
     func clearAllData() {
 
-        user = User()
+		user = User(token: String())
         matchListRefreshed = nil
         isLoggedIn = false
 

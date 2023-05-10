@@ -18,7 +18,6 @@ final class MainPresenter: BasePresenter<MainVC>, MainPresenterProtocol {
     
     // MARK: - Variables
     private var view: MainViewProtocol
-    private var router: MainRouterProtocol
     private var model: MainModelProtocol
     
     // MARK: Private Properties
@@ -26,14 +25,12 @@ final class MainPresenter: BasePresenter<MainVC>, MainPresenterProtocol {
     
     // MARK: - Override
     override var v: BaseViewProtocol? { view }
-    override var r: BaseRouterProtocol? { router }
     override var m: BaseModelProtocol? { model }
     
-    init(view: MainViewProtocol, router: MainRouterProtocol, model: MainModelProtocol) {
+    init(view: MainViewProtocol, model: MainModelProtocol) {
         self.view = view
-        self.router = router
         self.model = model
-        super.init(view: view, router: router, model: model)
+        super.init(view: view, model: model)
     }
     
     deinit {
@@ -58,7 +55,13 @@ final class MainPresenter: BasePresenter<MainVC>, MainPresenterProtocol {
     }
     
     func openSecondVC(){
-        router.openSecondVC()
+		let user = User(token: "test_token")
+		let secondVC = SecondModuleBuilder().create(user: user) { [weak self] (user) in
+			guard let `self` = self else { return }
+			print("NEW User token: " + (user.token))
+		}
+		print("OLD User token: " + (user.token))
+		v?.navigationController?.pushViewController(secondVC, animated: true)
     }
     
 }

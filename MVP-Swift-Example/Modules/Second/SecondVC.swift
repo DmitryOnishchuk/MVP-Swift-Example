@@ -15,7 +15,7 @@ protocol SecondViewProtocol: MainViewProtocol {
 final class SecondVC: BaseViewController, SecondViewProtocol{
     
     // MARK: - Outlets
-    @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet private weak var infoLabel: UILabel!
     
     // MARK: - Variables
     var presenter: SecondPresenterProtocol!

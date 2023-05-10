@@ -12,9 +12,8 @@ struct MainModuleBuilder {
     func create() -> UINavigationController {
         let mainNC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNC") as! UINavigationController
         let mainVC = mainNC.topViewController as! MainVC
-        let router = MainRouter(vc: mainVC)
         let model = MainModel()
-        let presenter = MainPresenter(view: mainVC, router: router, model: model)
+        let presenter = MainPresenter(view: mainVC, model: model)
         mainVC.presenter = presenter
         return mainNC
     }

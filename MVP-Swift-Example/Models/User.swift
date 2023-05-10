@@ -8,5 +8,5 @@
 import Foundation
 
 struct User: Codable {
-    var token: String?
+    var token: String
 }
